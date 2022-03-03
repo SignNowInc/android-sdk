@@ -5,6 +5,7 @@ Simple SDK to integrate SignNow in your application. The current version of SDK 
 ### <a name="table-of-contents"></a>Table of Contents
 
 1. [Requirements](#requirements)
+2. [Credentials Needed](#credentials)
 3. [Setup](#setup)
 4. [Starting session](#starting-session)
 5. [Document fetching](#document-fetching)
@@ -15,10 +16,11 @@ Simple SDK to integrate SignNow in your application. The current version of SDK 
 
 Minimum supported Android API is 21
 
-## <a name="setup"></a>Setup
-Before SDK implementation a `clientId` and `clientSecret` must be created.
-Can be created here: https://app.signnow.com/webapp/api-dashboard/keys.
+## <a name="credentials"></a>Credentials
+Before getting started, a `clientId` and `clientSecret` must be created. The SDK cannot be used without these.
+Visit https://app.signnow.com/webapp/api-dashboard/keys to obtain them.
 
+## <a name="setup"></a>Setup
 After an app will be created and `clientId` and `clientSecret` will be generated SDK can be initialized.
 The SDK can be initialized in your `Application` class with one string of code.
 
@@ -77,7 +79,7 @@ ImageLoader.Builder(applicationContext)
                 val client = OkHttpClient.Builder()
                     .cache(CoilUtils.createDefaultCache(applicationContext))
                     .addInterceptor { chain ->
-                        val (name, value) = SignnowSDK.getImageLoadingHeader(tokenStorage.accessToken!!)
+                        val (name, value) = SignnowSDK.getImageLoadingHeader(accessToken)
                         val newRequest = chain.request().newBuilder()
                             .addHeader(name, value)
                             .build()
