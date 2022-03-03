@@ -21,7 +21,15 @@ Before getting started, a `clientId` and `clientSecret` must be created. The SDK
 Visit https://app.signnow.com/webapp/api-dashboard/keys to obtain them.
 
 ## <a name="setup"></a>Setup
-After an app will be created and `clientId` and `clientSecret` will be generated SDK can be initialized.
+
+### Setting up the dependency
+The Signnow SDK can be added as a Gradle dependency:
+
+```groovy
+implementation "com.signnow:signnow-android-sdk:0.0.5@aar"
+```
+
+### Setting up the SDK
 The SDK can be initialized in your `Application` class with one string of code.
 
 ```kotlin
