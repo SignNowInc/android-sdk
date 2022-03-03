@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_create_deposit"
+        android:title="@string/main_activity_item_deposit" />
+    <item
+        android:id="@+id/menu_create_loan"
+        android:title="@string/main_activity_item_loan" />
+</menu>

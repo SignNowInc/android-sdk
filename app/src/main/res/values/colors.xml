@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#E3E6E9</color>
+
+    <color name="trolleyGray800">#414141</color>
+    <color name="grayA200">#E3E6E9</color>
+    <color name="gray200">#8F9DA8</color>
+
+    <color name="green500">#3BB273</color>
+    <color name="greenA200">#E1F3EA</color>
+    <color name="greenA300">#CEEBDC</color>
+</resources>

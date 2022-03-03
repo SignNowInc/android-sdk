@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">borrowNow</string>
+    <string name="contracts_activity_title">Signed Contracts</string>
+    <string name="user_input_activity_title">Fill fields</string>
+    <string name="user_input_information">Please fill the field below before contract signing. Check the data validity before signing the document.</string>
+    <string name="user_input_name">First name:</string>
+    <string name="user_input_surname">Second name:</string>
+    <string name="user_input_age">Age:</string>
+    <string name="user_input_loan">Loan size:</string>
+    <string name="user_input_email">Email:</string>
+    <string name="user_input_next_btn">Next</string>
+    <string name="signing_result_title">Congratulations!</string>
+    <string name="signing_result_description">You have successfully signed the document. Please, pass the device to the manager</string>
+
+
+    <string name="main_activity_item_deposit">Create Deposit</string>
+    <string name="main_activity_item_loan">Give Loan</string>
+    <string name="main_activity_item_clients">Clients</string>
+    <string name="main_activity_item_contracts">Contracts</string>
+    <string name="main_activity_manager">Hello, <b>Jennifer</b></string>
+    <string name="main_activity_date">Tuesday, Sep 20</string>
+
+    <string name="deposit_activity_interest_rate_reinvest">Reinvest % each month</string>
+    <string name="deposit_activity_interest_rate_monthly">Monthly</string>
+    <string name="deposit_activity_termination">Terminate on demand</string>
+    <string name="deposit_activity_termination_description">Lower interest rate</string>
+    <string name="deposit_activity_client">Select the client</string>
+    <string name="deposit_activity_client_description">For whom the deposit will be created</string>
+    <string name="deposit_activity_create_btn">Create deposit</string>
+    <plurals name="deposit_activity_month">
+        <item quantity="one">1 month</item>
+        <item quantity="other">%1$d Months</item>
+    </plurals>
+    <string name="deposit_activity_interest_rate">Interest rate %1$d%%</string>
+    <string name="deposit_activity_percentage">%1$d%%</string>
+    <string name="deposit_activity_credit_score">Credit score: %d</string>
+
+    <string name="clients_list_label">Clients</string>
+    <string name="clients_list_pick">Select client</string>
+    <string name="clients_list_create_title">Add client</string>
+    <string name="clients_list_create_hint">Enter name</string>
+    <string name="clients_list_create_btn">Add</string>
+    <string name="clients_btn">Add New Client</string>
+
+    <string name="amount_activity_title">Enter the amount</string>
+    <string name="amount_activity_minimum">Minimum amount is 1000$</string>
+    <string name="amount_activity_continue">Continue</string>
+
+    <string name="loan_activity_title">Enter loan size</string>
+</resources>

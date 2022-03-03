@@ -1,0 +1,5 @@
+rootProject.name = "signNow-android-sdk"
+include ':app'
+include ':utils'
+include ':sample_java'
+include ':sampleTokenStorage'
