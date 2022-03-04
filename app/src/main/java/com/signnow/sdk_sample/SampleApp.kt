@@ -22,7 +22,7 @@ class SampleApp : Application(), ImageLoaderFactory {
         tokenStorage = TokenStorage(this)
         val clientId = "your clientId"
         val clientSecret = "your clientSecret"
-        val grantType = SNGrantType.Credentials("signnow account email", "pass")
+        val grantType = SNGrantType.Credentials("sdk.sampletest@gmail.com", "passqwer1")
 
         val onAccessTokenReceived = object : SNResultCallback<SNAccessToken> {
             override fun onResult(value: SNAccessToken) {

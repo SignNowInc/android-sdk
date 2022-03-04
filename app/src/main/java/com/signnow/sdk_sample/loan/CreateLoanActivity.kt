@@ -50,7 +50,7 @@ class CreateLoanActivity : AppCompatActivity(), SNLoadingHelper {
             if (!::selectedClient.isInitialized) {
                 Toast.makeText(this, "You need to select client", Toast.LENGTH_SHORT).show()
             } else {
-                val templateId = "8a900a73e8d242c2a8c316fe1b61325d40005046"
+                val templateId = "4605e15358874f21ab186caf92d5a9ca02c31a0d"
                 val email = "sckalper@gmail.com"
                 val recipients = listOf(SNRecipient(email, "Signer 1"), SNRecipient("anarak@mail4gmail.com", "Signer 2"),
                     SNRecipient("some@mail.com", "Signer 3"))

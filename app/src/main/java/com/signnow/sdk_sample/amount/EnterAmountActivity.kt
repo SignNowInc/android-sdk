@@ -44,7 +44,7 @@ class EnterAmountActivity : AppCompatActivity(), SNLoadingHelper {
         et_amount?.requestFocus()
 
         btn_amount_continue?.setOnClickListener {
-            val templateId = "c88948a7e5294674a1f30b72b0609b1baf96ffd9"
+            val templateId = "9ec057d14dc44ab38c1a140ac7fa0761d6a1cfb7"
             val email = "sckalper@gmail.com"
             val recipients = listOf(SNRecipient(email, "Signer 1"), SNRecipient("anarak@mail4gmail.com", "Signer 2"))
             SigningSession.startSigning(editorLauncher, templateId, recipients, getPreFillValues(), this)
