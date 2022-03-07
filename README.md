@@ -18,7 +18,9 @@ Minimum supported Android API is 21
 
 ## <a name="credentials"></a>Credentials
 Before getting started, a `clientId` and `clientSecret` must be created. The SDK cannot be used without these.
-Visit https://app.signnow.com/webapp/api-dashboard/keys to obtain them.
+Visit https://app.signnow.com/webapp/api-dashboard/keys to obtain them. 
+
+More info: https://docs.signnow.com/docs/signnow/ZG9jOjM3OTI3NTY3-account
 
 ## <a name="setup"></a>Setup
 
@@ -26,7 +28,7 @@ Visit https://app.signnow.com/webapp/api-dashboard/keys to obtain them.
 The Signnow SDK can be added as a Gradle dependency:
 
 ```groovy
-implementation "com.signnow:signnow-android-sdk:0.0.5@aar"
+implementation "com.signnow:signnow-android-sdk:0.0.72"
 ```
 
 ### Setting up the SDK
@@ -37,10 +39,26 @@ SignnowSDK.init(applicationContext, clientId, clientSecret)
 ```
 
 After the SDK was initialized you must authorize it, otherwise, the session won’t be available to start. To authorize you will need to pass `grantType` parameter and an instance of `SNResultCallback<AccessToken>`.
-Where `grantType` is one of the possible implementations of `SNGrantType` class. For example it can be:
+Where `grantType` is one of the possible implementations of `SNGrantType` class. 
+
+The `SNGrantType.Credentials` can be used ONLY by application owners to obtain access tokens for their accounts:
 
 ```kotlin
-val grantType = SNGrantType.Credentials("some@mail.com", "password")
+val grantType = SNGrantType.Credentials("app.owner@mail.com", "password")
+```
+
+To get access to resources of other signNow accounts, use `SNGrantType.AuthCode`.
+The `SNGrantType.AuthCode` requires authorization code. The authorization code can be obtained like this:
+
+```kotlin
+SignnowSDK.obtainAuthorizeCode(object : SNResultCallback<String> {
+        override fun onResult(value: String) {
+            //authorization flow...
+        }
+        override fun onError(error: Throwable?) {
+            //Handle error...
+        }
+})
 ```
 
 ❗During authorization must be used credentials of the Signnow account which contains documents(templates) which will be used in your application flow
