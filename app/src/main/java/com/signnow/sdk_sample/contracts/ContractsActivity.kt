@@ -52,7 +52,7 @@ class ContractsActivity : AppCompatActivity(), SNLoadingHelper {
     }
 
     private fun fetchDocuments() {
-        val documentsFolderId = "ac12882357db13107f663a6981775e9690242dbf"
+        val documentsFolderId = "61e16708c5f6433d9c23322600fdecf94d896549"
         SignnowSDK.documentsProvider.getTemplates(documentsFolderId,
             3,
             0,

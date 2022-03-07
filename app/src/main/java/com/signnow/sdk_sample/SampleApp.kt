@@ -2,6 +2,7 @@ package com.signnow.sdk_sample
 
 import android.app.Application
 import android.util.Log
+import android.widget.Toast
 import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.util.CoilUtils
@@ -22,7 +23,6 @@ class SampleApp : Application(), ImageLoaderFactory {
         tokenStorage = TokenStorage(this)
         val clientId = "your clientId"
         val clientSecret = "your clientSecret"
-        val grantType = SNGrantType.Credentials("sdk.sampletest@gmail.com", "passqwer1")
 
         val onAccessTokenReceived = object : SNResultCallback<SNAccessToken> {
             override fun onResult(value: SNAccessToken) {
@@ -39,7 +39,17 @@ class SampleApp : Application(), ImageLoaderFactory {
         SignnowSDK.init(applicationContext, clientId, clientSecret)
 
         if (tokenStorage.accessToken.isNullOrBlank() || tokenStorage.refreshToken.isNullOrBlank()) {
-            SignnowSDK.authorize(grantType, onAccessTokenReceived)
+            SignnowSDK.obtainAuthorizeCode(object : SNResultCallback<String> {
+                override fun onResult(value: String) {
+                    SignnowSDK.authorize(SNGrantType.AuthCode(value), onAccessTokenReceived)
+                }
+
+                override fun onError(error: Throwable?) {
+                    Toast
+                        .makeText(this@SampleApp, error?.message, Toast.LENGTH_SHORT)
+                        .show()
+                }
+            })
         }
     }
 

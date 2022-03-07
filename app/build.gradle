@@ -44,7 +44,7 @@ dependencies {
     implementation androidx.appcompat
     implementation material
 
-    implementation("com.signnow:signnow-android-sdk:0.0.5@aar")
+    implementation("com.signnow:signnow-android-sdk:0.0.72")
 
     implementation project(':sampleTokenStorage')
     implementation project(':utils')
