@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.signnow.sdk_sample">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".SampleApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SignnowSDK">
+
+        <activity
+            android:exported="true"
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".clients.ClientSelectionActivity"
+            android:label="@string/clients_list_label"
+            android:theme="@style/Theme.SignnowSDK.WithFooter" />
+
+        <activity
+            android:name=".deposits.CreateDepositActivity"
+            android:label="@string/main_activity_item_deposit"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.SignnowSDK.WithFooter" />
+
+        <activity
+            android:name=".loan.CreateLoanActivity"
+            android:label="@string/loan_activity_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.SignnowSDK.WithFooter"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".amount.EnterAmountActivity"
+            android:label="@string/amount_activity_title"
+            android:parentActivityName=".deposits.CreateDepositActivity"
+            android:theme="@style/Theme.SignnowSDK.WithFooter"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".user_input.UserInputActivity"
+            android:label="@string/user_input_activity_title"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".result.SigningSessionResultActivity"
+            android:theme="@style/Theme.FullScreen" />
+
+        <activity
+            android:name=".contracts.ContractsActivity"
+            android:theme="@style/Theme.SignnowSDK.WithFooter"
+            android:label="@string/contracts_activity_title" />
+
+    </application>
+
+</manifest>
