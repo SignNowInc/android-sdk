@@ -15,15 +15,15 @@ import org.jetbrains.annotations.Nullable;
 
 public class SampleJavaApp extends Application {
 
-    private final String clientId = "f8597038e3dba482ede025b56cb7ba26";
-    private final String clientSecret = "3cca133277777930457ec9266e26266c";
+    private final String clientId = "your client id";
+    private final String clientSecret = "your secret";
 
 
     @Override
     public void onCreate() {
         super.onCreate();
         TokenStorage tokenStorage = new TokenStorage(this);
-        SNGrantType grantType = new SNGrantType.Credentials("pavliuk.roman@pdffiller.team", "123123");
+        SNGrantType grantType = new SNGrantType.Credentials("email", "password");
 
         SNResultCallback<SNAccessToken> onAccessTokenReceived = new SNResultCallback<SNAccessToken>() {
             @Override
