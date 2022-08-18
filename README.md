@@ -133,3 +133,11 @@ The SDK allows you to pre-fill(fill fields with your data) fields before signing
 The result of signing(successful or not) will be received by the `activityLauncher` instance used in the `SignnowSession.startSigning` method.
 
 > If you don't want to use `ActivityResultLauncher` you still have the possibility to use the old approach with request codes. If the old way is used you will get the result in `onActivityResult` method.
+
+## Sample app
+
+To run a sample app you need to sign in with this account:
+
+Email: sdk.sampletest@gmail.com
+
+Password: passqwer1
